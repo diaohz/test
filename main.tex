@@ -1,0 +1,36 @@
+\input{preamble}
+
+\includeonly{cover_pages}
+
+\begin{document}
+{\pagestyle{empty}
+ \include{cover_pages}
+}
+
+{\pagenumbering{roman}
+
+ \pdfbookmark{\contentsname}{toc}
+ \tableofcontents\newpage
+
+ \pagestyle{plain}
+ \include{a_a} % acknowledgement and abstract
+ \cleardoublepage
+}
+
+\setcounter{page}{1}
+\pagenumbering{arabic}
+
+\include{introduction}
+\include{iterative_methods}
+\include{preconditioning_techniques}
+\include{fourier_analysis}
+\include{numerical_experiments}
+\include{summary}
+
+\appendix
+\include{optimal_omega}
+
+\bibliographystyle{siam}
+\bibliography{hp_literature}
+
+\end{document}
